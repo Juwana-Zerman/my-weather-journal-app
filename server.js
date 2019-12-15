@@ -43,4 +43,11 @@ function getTheData(req, res) {
     res.send('POST data received');
 }
 
-//POST Zip
+// const data = [];
+
+// app.post('/addMovie', addMovie);
+
+// function addMovie (req, res) {
+//     console.log(req.body)
+//     data.push(req.body)
+// }

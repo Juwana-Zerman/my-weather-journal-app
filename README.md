@@ -12,7 +12,7 @@ To run this app fork, clone, or download this repository to your local machine. 
 * npm install cors
 * npm install body-parser
 
-When those are installed run **node server.js** in the terminal. Once the app is running visit localhost:8000 in the browser to view the app. The user can input a zip code and current feelings into the provided fields. Submitting the form will send a request to the OpenWeatherMap API and return weather information for that location.
+When those are installed run `**node server.js**` in the terminal. Once the app is running visit localhost:8000 in the browser to view the app. The user can input a zip code and current feelings into the provided fields. Submitting the form will send a request to the OpenWeatherMap API and return weather information for that location.
 
 ## Dependencies
 

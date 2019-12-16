@@ -22,7 +22,7 @@ app.use(express.static('website'));
 const port = 8000;
 //Spin up server
 const server = app.listen(port, listening);
-//const server = app.listen(port, ()=>{console.log(`running on localhost: ${port}`)})
+// or const server = app.listen(port, ()=>{console.log(`running on localhost: ${port}`)})
 //Callback to debug
 function listening() {
     console.log('server running');
@@ -30,24 +30,16 @@ function listening() {
 };
 
 // GET route
-app.get('/all', sendData);
-
-function sendData (req, res) {
+app.get('/data', (req, res) => {
+    console.log('GET request received');
     res.send(projectData);
-}
+});
 
 // POST route
-app.post('/add', getTheData);
-
-function getTheData(req, res) {
-    res.send('POST data received');
-}
-
-// const data = [];
-
-// app.post('/addMovie', addMovie);
-
-// function addMovie (req, res) {
-//     console.log(req.body)
-//     data.push(req.body)
-// }
+app.post('/', (req, res) => {
+    projectData.date = req.body.date;
+    projectData.temperature = req.body.main.temp;
+    projectData.feelings = req.body.feelings;
+    console.log('POST request received');
+    res.end();
+});
